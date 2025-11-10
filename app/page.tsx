@@ -150,7 +150,7 @@ export default function Home() {
             className="hero-video"
             onError={(e) => console.error("Hero video failed to load", e)}
           >
-            <source src="/crosmos-vid.mp4" type="video/mp4" />
+            <source src="/crosomos-2.mp4" type="video/mp4" />
           </video>
 
           <div className="hero-content">
@@ -221,21 +221,41 @@ export default function Home() {
               why need a second brain? when you can use your first one, better?
             </motion.p>
 
-            {/* CTA Button */}
-            <motion.a
-              href="https://tally.so/r/aQNo9y"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="cta-button mt-6 inline-flex items-center justify-center gap-2"
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-              }
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <span className="button-text">JOIN WAITLIST</span>
-              <ArrowRight className="w-4 h-4" />
-             </motion.a>
+             {/* CTA Button */}
+             <motion.a
+               href="https://tally.so/r/aQNo9y"
+               target="_blank"
+               rel="noopener noreferrer"
+               className="cta-button mt-6 inline-flex items-center justify-center gap-2"
+               initial={{ opacity: 0, y: 20 }}
+               animate={
+                 startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+               }
+               transition={{ duration: 0.8, delay: 1 }}
+             >
+               <span className="button-text">JOIN WAITLIST</span>
+               <ArrowRight className="w-4 h-4" />
+              </motion.a>
+
+             {/* Community Link */}
+             <motion.div
+               className="mt-2"
+               initial={{ opacity: 0, y: 20 }}
+               animate={
+                 startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+               }
+               transition={{ duration: 0.8, delay: 1.2 }}
+             >
+               <a
+                 href="https://discord.gg/UnrQwtPHSw"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 className="text-sm font-semibold underline"
+                 style={{ color: '#ffffff' }}
+               >
+                 join the community!
+               </a>
+             </motion.div>
           </div>
         </main>
 
