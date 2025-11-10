@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import Lenis from "lenis";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const opacity = {
   initial: { opacity: 0 },
@@ -109,8 +110,8 @@ export default function Home() {
               />
             </div>
             <nav className="nav">
-              <a href="/about" className="nav-link">about</a>
-              <a href="/why" className="nav-link">why?</a>
+              <Link href="/about" className="nav-link">about</Link>
+              <Link href="/why" className="nav-link">why?</Link>
             </nav>
           </header>
           <video

@@ -147,7 +147,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 85vh;
     padding: 0 40px;
 }
 
@@ -295,7 +295,7 @@ body {
 .video-container {
     position: relative;
     height: 1000px;
-    margin-top: -150px;
+    margin-top: -100px;
     border-radius: 50px;
     margin-left: 20px;
     margin-right: 20px;
@@ -321,12 +321,34 @@ body {
         font-size: 24px;
     }
 
+    /* Hide videos on mobile */
+    .hero-video {
+        display: none;
+    }
+
+    .video-container {
+        display: none;
+    }
+
+    /* Adjust hero for mobile */
+    .hero {
+        min-height: 100vh;
+        background-color: #80a4fe;
+        padding: 0 20px;
+    }
+
+    .hero-content {
+        padding-top: 80px;
+    }
+
     .heading {
-        font-size: clamp(36px, 8vw, 72px);
+        font-size: clamp(48px, 12vw, 80px);
+        margin-bottom: 16px;
     }
 
     .subheading {
-        font-size: 16px;
+        font-size: 15px;
+        margin-bottom: 40px;
     }
 
     .about-paragraph {
@@ -359,26 +381,18 @@ body {
     }
 
     .tagline {
-        font-size: 11px;
+        font-size: 10px;
+        margin-bottom: 24px;
     }
 
     .cta-button {
-        font-size: 12px;
-        padding: 16px 40px;
+        font-size: 11px;
+        padding: 18px 36px;
     }
 
     .about-main {
         padding-top: 120px;
         padding-bottom: 20px;
-    }
-
-    .video-container {
-        height: 600px;
-        margin-top: -120px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding: 10px;
-        border-radius: 30px;
     }
 }
 

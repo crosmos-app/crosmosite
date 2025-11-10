@@ -2,6 +2,7 @@
 
 import "../page.css";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Why() {
   return (
@@ -20,8 +21,8 @@ export default function Why() {
             />
           </div>
           <nav className="nav">
-            <a href="/" className="nav-link">home</a>
-            <a href="/about" className="nav-link">about</a>
+            <Link href="/" className="nav-link">home</Link>
+            <Link href="/about" className="nav-link">about</Link>
           </nav>
         </header>
 
