@@ -403,6 +403,7 @@ body {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
     font-family: "Geist Mono", "Courier New", monospace;
     font-size: 14px;
     color: #1e1e1e;
