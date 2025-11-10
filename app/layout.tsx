@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Crosmos - Think Better, Not Twice",
     description:
-      "Fast. Local. Agentic AF. A second brain powered by your first one.",
+      "Fast. Local. Agentic AF. The knowledge base that thinks with you.",
     url: "https://crosmos.app",
     siteName: "Crosmos",
     images: [
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Crosmos - Think Better, Not Twice",
     description:
-      "Fast. Local. Agentic AF. A second brain powered by your first one.",
+      "Fast. Local. Agentic AF. The knowledge base that thinks with you.",
     images: ["/crosmoswebimage.png"],
   },
 };
