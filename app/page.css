@@ -155,6 +155,8 @@ body {
     text-align: center;
     max-width: 900px;
     width: 100%;
+    position: relative;
+    z-index: 20;
 }
 
 .hero-video {
@@ -206,7 +208,7 @@ body {
     font-weight: 900;
     color: #cccccc;
     line-height: 1.6;
-    margin-bottom: 110px;
+    margin-bottom: 60px;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
