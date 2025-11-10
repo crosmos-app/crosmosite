@@ -370,8 +370,11 @@ body {
     }
 
     .heading {
-        font-size: clamp(48px, 12vw, 80px);
+        font-size: clamp(42px, 10vw, 68px);
         margin-bottom: 16px;
+        font-weight: 600;
+        letter-spacing: -1px;
+        line-height: 1;
     }
 
     .subheading {
