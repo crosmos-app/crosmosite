@@ -109,7 +109,8 @@ export default function Home() {
               />
             </div>
             <nav className="nav">
-              <span className="nav-link">why?</span>
+              <a href="/about" className="nav-link">about</a>
+              <a href="/why" className="nav-link">why?</a>
             </nav>
           </header>
           <video
