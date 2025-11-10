@@ -32,11 +32,11 @@ export const metadata: Metadata = {
     siteName: "Crosmos",
     images: [
       {
-        url: "https://crosmos.app/crosmoswebimage.png",
-        width: 1200,
-        height: 630,
+        url: "https://crosmos.app/crosmoswebimage.jpg",
+        width: 1906,
+        height: 925,
         alt: "Crosmos - Think Better, Not Twice",
-        type: "image/png",
+        type: "image/jpeg",
       },
     ],
     type: "website",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "Crosmos - Think Better, Not Twice",
     description:
       "Fast. Local. Agentic AF. The knowledge base that thinks with you.",
-    images: ["https://crosmos.app/crosmoswebimage.png"],
+    images: ["https://crosmos.app/crosmoswebimage.jpg"],
   },
 };
 
