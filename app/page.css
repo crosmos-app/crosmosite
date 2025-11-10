@@ -1,0 +1,400 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: "Copernicus New Cond Trial";
+  src: url('/fonts/CopernicusNewCondTrial-090-BF6616044f92f03.otf') format('opentype'), url('/fonts/CopernicusNewCondTrial.woff2') format('woff2'), url('/fonts/CopernicusNewCondTrial.woff') format('woff'), local("Copernicus New Cond Trial");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: local("Satoshi");
+  font-display: swap;
+}
+
+/* Preloader */
+.preloader {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 99;
+  background-color: #141516;
+}
+
+.preloader svg {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: calc(100% + 300px);
+}
+
+.preloader svg path {
+  fill: #141516;
+}
+
+.preloader p {
+  color: white;
+  font-size: 42px;
+  position: absolute;
+  z-index: 1;
+  line-height: 1;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  to { transform: translateY(-100%); }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: scale(0); }
+  40% { transform: scale(1); }
+}
+
+body {
+  background-color: #80A4FE;
+}
+
+/* Page Container */
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+
+
+/* Header is now transparent with no blur background */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 40px;
+  background: transparent;
+}
+
+.logo {
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.logo-text {
+  background: linear-gradient(135deg, #ffffff 0%, #e6e6e6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.nav-link {
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 24px;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+/* Hero is now full-height single section with no animation */
+.hero {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 40px;
+}
+
+.hero-content {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Tagline */
+.tagline {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #cccccc;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Main Heading */
+.heading {
+  font-family: "Copernicus New Cond Trial", "Georgia", serif;
+  font-size: clamp(60px, 12vw, 140px);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 0.9;
+  margin-bottom: 20px;
+  letter-spacing: -2px;
+}
+
+.heading-line {
+  display: block;
+}
+
+/* Subheading */
+.subheading {
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 900;
+  color: #cccccc;
+  line-height: 1.6;
+  margin-bottom: 110px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA Button */
+.cta-button {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 22px 55px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  background-color: #1e1e1e;
+  color: #ffffff;
+  filter: brightness(1.05);
+  padding-right: 70px;
+  transition: all 0.5s ease;
+}
+
+.button-text {
+  transition: transform 0.5s ease 0.3s;
+}
+
+.cta-button:hover .button-text {
+  transform: translateX(-10px);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+/* Custom styles for InteractiveHoverButton */
+.cta-button-custom {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000000;
+  background-color: #ffffff;
+  padding: 22px 55px;
+  border-radius: 50px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: auto !important; /* override w-32 */
+  border: none;
+}
+
+/* Open source link */
+.open-source-link {
+  display: block;
+  font-family: "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 15px;
+  font-weight: 900;
+  color: #cccccc;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-top: 20px;
+}
+
+.open-source-link:hover {
+  color: #ffffff;
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  height: 1000px;
+  margin-top: -150px;
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 20px;
+  overflow: hidden;
+  z-index: 15;
+}
+
+.container-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    padding: 24px 20px;
+  }
+
+  .logo-text {
+    font-size: 24px;
+  }
+
+  .heading {
+    font-size: clamp(36px, 8vw, 72px);
+  }
+
+  .subheading {
+    font-size: 16px;
+  }
+
+  .tagline {
+    font-size: 11px;
+  }
+
+  .cta-button {
+    font-size: 12px;
+    padding: 16px 40px;
+  }
+
+  .video-container {
+    height: 600px;
+    margin-top: -120px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 30px;
+  }
+}
+
+/* Footer */
+.footer {
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  align-items: center;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ccc;
+  text-decoration: none;
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+}
+
+.footer-icon {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-link {
+    font-size: 14px;
+  }
+
+  .footer-subtext {
+    font-size: 12px;
+  }
+}
+
+/* Footer subtext */
+.footer-subtext {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 14px;
+  color: #1e1e1e;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.icons {
+  display: flex;
+  gap: 8px;
+}
+
+.sub-icon {
+  width: 20px;
+  height: 20px;
+  color: #1e1e1e;
+}
+
+.footer-sub-link {
+  color: #1e1e1e;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.footer-sub-link:hover {
+  color: #ffffff;
+}
