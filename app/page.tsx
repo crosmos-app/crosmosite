@@ -235,20 +235,7 @@ export default function Home() {
             >
               <span className="button-text">JOIN WAITLIST</span>
               <ArrowRight className="w-4 h-4" />
-            </motion.a>
-
-            {/* Open source link */}
-            <motion.a
-              href="#"
-              className="open-source-link mt-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={
-                startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-              }
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
-              it's open source
-            </motion.a>
+             </motion.a>
           </div>
         </main>
 
