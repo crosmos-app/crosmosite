@@ -326,7 +326,12 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .header {
-        padding: 24px 20px;
+        padding: 20px 20px;
+    }
+
+    .logo img {
+        width: 60px !important;
+        height: 60px !important;
     }
 
     .logo-text {
