@@ -10,7 +10,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Crosmos - Think Better, Not Twice",
   description:
-    "Fast. Local. Agentic AF. A second brain powered by your first one.",
+    "Fast. Local. Agentic AF. The knowledge base that thinks with you.",
   generator: "v0.app",
   icons: {
     icon: [
@@ -26,7 +26,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://crosmos.app"),
   openGraph: {
     title: "Crosmos - Think Better, Not Twice",
-    description: "Fast. Local. Agentic AF. A second brain powered by your first one.",
+    description:
+      "Fast. Local. Agentic AF. A second brain powered by your first one.",
     url: "https://crosmos.app",
     siteName: "Crosmos",
     images: [
@@ -41,13 +42,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Crosmos - Think Better, Not Twice",
-    description: "Fast. Local. Agentic AF. A second brain powered by your first one.",
+    description:
+      "Fast. Local. Agentic AF. A second brain powered by your first one.",
     images: ["/crosmoswebimage.png"],
   },
 };
 
 export const viewport = {
-  width: 'device-width',
+  width: "device-width",
   initialScale: 1.0,
 };
 
