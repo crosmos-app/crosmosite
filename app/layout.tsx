@@ -23,6 +23,27 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/site.webmanifest",
+  metadataBase: new URL("https://crosmos.app"),
+  openGraph: {
+    title: "Crosmos - Think Better, Not Twice",
+    description: "Fast. Local. Agentic AF. A second brain powered by your first one.",
+    url: "https://crosmos.app",
+    siteName: "Crosmos",
+    images: [
+      {
+        url: "/crosmoswebimage.png",
+        alt: "Crosmos - Think Better, Not Twice",
+      },
+    ],
+    type: "website",
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Crosmos - Think Better, Not Twice",
+    description: "Fast. Local. Agentic AF. A second brain powered by your first one.",
+    images: ["/crosmoswebimage.png"],
+  },
 };
 
 export const viewport = {
