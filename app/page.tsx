@@ -23,8 +23,6 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [dimension, setDimension] = useState({ width: 0, height: 0 });
   const [startAnimation, setStartAnimation] = useState(false);
-  const [headerVisible, setHeaderVisible] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
 
   useEffect(() => {
     setDimension({ width: window.innerWidth, height: window.innerHeight });
@@ -49,28 +47,6 @@ export default function Home() {
       lenis.destroy();
     };
   }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past 100px
-        setHeaderVisible(false);
-      } else {
-        // Scrolling up or at top
-        setHeaderVisible(true);
-      }
-
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [lastScrollY]);
 
   const initialPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height + 300} 0 ${dimension.height} L0 0`;
   const targetPath = `M0 0 L${dimension.width} 0 L${dimension.width} ${dimension.height} Q${dimension.width / 2} ${dimension.height} 0 ${dimension.height} L0 0`;
@@ -119,30 +95,23 @@ export default function Home() {
       </AnimatePresence>
 
       <div className="page-container">
-        <header
-          className="header"
-          style={{
-            transform: headerVisible ? "translateY(0)" : "translateY(-100%)",
-            transition: "transform 0.3s ease-in-out",
-          }}
-        >
-          <div className="logo flex items-center gap-3">
-            <Image
-              src="/crosmosnobg.png"
-              alt="Crosmos Logo"
-              width={90}
-              height={90}
-              className="object-contain"
-              priority
-            />
-          </div>
-          <nav className="nav">
-            <span className="nav-link">why?</span>
-          </nav>
-        </header>
-
         {/* Main hero section */}
         <main className="hero">
+          <header className="header">
+            <div className="logo flex items-center gap-3">
+              <Image
+                src="/crosmosnobg.png"
+                alt="Crosmos Logo"
+                width={90}
+                height={90}
+                className="object-contain"
+                priority
+              />
+            </div>
+            <nav className="nav">
+              <span className="nav-link">why?</span>
+            </nav>
+          </header>
           <video
             autoPlay
             loop
@@ -150,7 +119,7 @@ export default function Home() {
             className="hero-video"
             onError={(e) => console.error("Hero video failed to load", e)}
           >
-            <source src="/crosomos-2.mp4" type="video/mp4" />
+            <source src="/crosmos-vid.mp4" type="video/mp4" />
           </video>
 
           <div className="hero-content">
@@ -221,41 +190,41 @@ export default function Home() {
               why need a second brain? when you can use your first one, better?
             </motion.p>
 
-             {/* CTA Button */}
-             <motion.a
-               href="https://tally.so/r/aQNo9y"
-               target="_blank"
-               rel="noopener noreferrer"
-               className="cta-button mt-6 inline-flex items-center justify-center gap-2"
-               initial={{ opacity: 0, y: 20 }}
-               animate={
-                 startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-               }
-               transition={{ duration: 0.8, delay: 1 }}
-             >
-               <span className="button-text">JOIN WAITLIST</span>
-               <ArrowRight className="w-4 h-4" />
-              </motion.a>
+            {/* CTA Button */}
+            <motion.a
+              href="https://tally.so/r/aQNo9y"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button mt-6 inline-flex items-center justify-center gap-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={
+                startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+              }
+              transition={{ duration: 0.8, delay: 1 }}
+            >
+              <span className="button-text">JOIN WAITLIST</span>
+              <ArrowRight className="w-4 h-4" />
+            </motion.a>
 
-             {/* Community Link */}
-             <motion.div
-               className="mt-2"
-               initial={{ opacity: 0, y: 20 }}
-               animate={
-                 startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
-               }
-               transition={{ duration: 0.8, delay: 1.2 }}
-             >
-               <a
-                 href="https://discord.gg/UnrQwtPHSw"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 className="text-sm font-semibold underline"
-                 style={{ color: '#ffffff' }}
-               >
-                 join the community!
-               </a>
-             </motion.div>
+            {/* Community Link */}
+            <motion.div
+              className="mt-2"
+              initial={{ opacity: 0, y: 20 }}
+              animate={
+                startAnimation ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+              }
+              transition={{ duration: 0.8, delay: 1.2 }}
+            >
+              <a
+                href="https://discord.gg/UnrQwtPHSw"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-semibold underline"
+                style={{ color: "#ffffff" }}
+              >
+                join the community!
+              </a>
+            </motion.div>
           </div>
         </main>
 
@@ -268,7 +237,7 @@ export default function Home() {
             className="container-video"
             onError={(e) => console.error("Container video failed to load", e)}
           >
-            <source src="/Crosmos-updated.mp4" type="video/mp4" />
+            <source src="/crosmos-2.mp4" type="video/mp4" />
           </video>
         </div>
 
@@ -309,7 +278,7 @@ export default function Home() {
               <span>
                 designed by{" "}
                 <a
-                  href="https://x.com/saishankar"
+                  href="https://x.com/sa1shankar"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="footer-sub-link"
